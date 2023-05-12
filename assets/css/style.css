@@ -64,6 +64,7 @@ main {
   margin-bottom: 45px;
 }
 
+
 .hero-banner {
   background: rgb(68, 88, 120);
   background-image: url('../images/02-hero-bg.jpg'), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
@@ -112,12 +113,32 @@ main {
   margin-bottom: 20px;
 }
 
+
+
+
+.navbar,
 .contact address {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   height: 100%;
+}
+
+.navbar a {
+  color: var(--secondary);
+  padding: 5px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-style: normal;
+  background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+  margin: 0 0.2rem 0.1rem;
+  display: inline-block;
+  
 }
 
 .contact address a {
@@ -134,7 +155,6 @@ main {
   margin: 0 0.2rem 0.1rem;
   display: inline-block;
 }
-
 .contact address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
@@ -142,4 +162,94 @@ main {
 
 .about-me img{
   border-radius: 50%;
+}
+
+.work,
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.work-gallery a {
+  flex: 0 0 10%;
+  border: 50% 50%;
+  border-color: var(--secondary);
+}
+
+
+
+#calculator,
+#car,
+#surfers,
+#buddy{
+ width: 490px;
+ height: 150px;
+ object-fit: cover;
+ margin-right: 20px;
+
+}
+
+img {
+  border: 5px solid var(--secondary);
+}
+
+.featured{
+  width: 1000px;
+  height: 300px;
+}
+
+/* When the screen hits 1420px where the
+ feautured image breaks, set all the images 
+ into squares */
+@media screen and (max-width: 1420px) {
+ .featured,
+#calculator,
+#car,
+#surfers,
+#buddy{
+ width: 200px;
+ height: 200px;
+ object-fit: cover;
+ margin-right: 20px;
+
+}
+
+}
+
+/* Add a backround to the hero banner */ 
+.hero-banner div h2 {
+  background-color: var(--secondary);
+  color: var(--tertiary);
+}
+
+
+
+/* https://www.w3schools.com/css/css_tooltip.asp
+https://www.w3schools.com/howto/howto_css_image_text.asp
+*/ 
+.work-gallery .text-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.work-gallery a:hover .text-block {
+  opacity: 1;
+}
+
+.work-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.work-gallery a {
+  position: relative;
+  margin: 10px;
 }
