@@ -139,3 +139,7 @@ main {
   background-size: 100% 88%;
   color: var(--secondary);
 }
+
+.about-me img{
+  border-radius: 50%;
+}
